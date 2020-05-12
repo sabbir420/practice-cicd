@@ -1,8 +1,8 @@
 setup:
-    python3 -m venv ~/.venv
+	python3 -m venv ~/.venv
 
 install:
-    pip install --upgrade pip &&\
+	pip install --upgrade pip &&\
         pip install -r requirements.txt
 
 test:
@@ -11,7 +11,7 @@ test:
 
 
 lint:
-    hadolint Dockerfile
-    pylint --disable=R,C,W1203 **.py
+	hadolint Dockerfile
+	pylint --disable=R,C,W1203 **.py
 
 all: install lint test
